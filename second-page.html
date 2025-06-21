@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('念一点.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Noto Sans SC', 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .welcome-message {
+            text-align: center;
+            color: #ffffff;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .message-form {
+            margin-top: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 380px; /* 设置表单宽度 */
+        }
+        .message-form input[type="text"],
+        .message-form textarea {
+            width: 100%; /* 宽度相对于表单 */
+            padding: 18px; /* 增加内边距 */
+            font-size: 1.1rem;
+            font-family: 'Noto Sans SC', 'Segoe UI', Arial, sans-serif;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            margin-bottom: 20px; /* 增加底部间距 */
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        .message-form input[type="text"]:focus,
+        .message-form textarea:focus {
+            border-color: #ffd700; /* 聚焦时的边框颜色 */
+        }
+        .message-form textarea {
+            height: 180px; /* 增加文本区域高度 */
+            resize: none;
+        }
+        .message-form input[type="text"]::placeholder,
+        .message-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .message-form button {
+            width: 100%; /* 按钮宽度相对于表单 */
+            padding: 18px;
+            font-size: 1.2rem;
+            font-family: 'Noto Sans SC', 'Segoe UI', Arial, sans-serif;
+            background: #CCFF33; /* 金色按钮 */
+            color: #33CCFF;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .message-form button:hover {
+            background: #FF3333; /* 悬停时颜色变深 */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .message-form button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        /* 响应式设计 */
+        @media (max-width: 500px) {
+            .welcome-message {
+                font-size: 2.5rem;
+                padding: 20px 30px;
+            }
+            .message-form {
+                width: 85%;
+                padding: 20px;
+            }
+            .message-form input[type="text"],
+            .message-form textarea,
+            .message-form button {
+                padding: 15px;
+                font-size: 1rem;
+            }
+            .message-form textarea {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">欢迎！请留下你的留言，证明你来过！</div>
+    <form class="message-form">
+        <input type="text" placeholder="输入你的QQ号..." required>
+        <textarea placeholder="输入你的留言..." required></textarea>
+        <button type="submit">提交留言</button>
+    </form>
+</body>
+</html>
